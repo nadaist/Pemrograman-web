@@ -117,19 +117,23 @@ include ('conn.php');
 						<div class="sosial-media">
 							<h4> CONTACT ME </h4>
 							<ul>
-								<li><a href="https://www.instagram.com/nadaistt/"> Instagram</a></li>
-								<li><a href="https://web.facebook.com/nadaistighfariana?_rdc=1&_rdr"> facebook</a></li>
-								<li><a href="https://myaccount.google.com/personal-info?gar=1"> gmail</a></li>
-								<li><a href="https://www.youtube.com/channel/UCYxjhATGyZSJXQvC8A8Gf9Q?view_as=subscriber"> youtube</a></li>
+								<?php 
+                  //proses menampilkan data dari database:
+                  //siapkan query SQL
+                  $query = "SELECT * FROM pemweb";
+                  $result = mysqli_query(connection(),$query);
+                 ?>
 							</ul>
 						</div>
 						<div class="FORMAL-EDUCATION">
 							<h4> FORMAL EDUCATION </h4>
 							<ul>
-								<li><a href="https://www.google.com/search?q=sdn+karanganyar+1&oq=sdnkaranganya&aqs=chrome.2.69i57j0i13l7.9040j0j7&sourceid=chrome&ie=UTF-8"> SD Negeri Karang Anyar 1 Bangkalan Madura</a></li>
-								<li><a href="https://mtsn2jombang.sch.id/"> MTsN 2 Rejoso Peterongan Jombang 1</a></li>
-								<li><a href="https://smadu1-jbg.sch.id/"> SMA DU 1 BPP-Teknologi Jombang</a></li>
-								<li><a href="https://www.upnjatim.ac.id/"> UPN Veteran Jawa Timur</a></li>
+								<?php 
+                  //proses menampilkan data dari database:
+                  //siapkan query SQL
+                  $query = "SELECT * FROM pemweb";
+                  $result = mysqli_query(connection(),$query);
+                 ?>
 							</ul>
 						</div>
 				</div>
