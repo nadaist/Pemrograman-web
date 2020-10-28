@@ -1,4 +1,8 @@
-include ('conn.php'); 
+<?php 
+  //memanggil file conn.php yang berisi koneski ke database
+  //dengan include, semua kode dalam file conn.php dapat digunakan pada file index.php
+  include ('conn.php'); 
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -58,21 +62,37 @@ include ('conn.php');
 		<div class="sidebar">
 			<div class="sosial-media">
 				<h4> CONTACT ME </h4>
-				<ul>
-					<li><a href="https://www.instagram.com/nadaistt/"> Instagram</a></li>
-					<li><a href="https://web.facebook.com/nadaistighfariana?_rdc=1&_rdr"> facebook</a></li>
-					<li><a href="https://myaccount.google.com/personal-info?gar=1"> gmail</a></li>
-					<li><a href="https://www.youtube.com/channel/UCYxjhATGyZSJXQvC8A8Gf9Q?view_as=subscriber"> youtube</a></li>
-				</ul>
+				<?php 
+				                  //proses menampilkan data dari database:
+				                  //siapkan query SQL
+				                  $query = mysqli_query($connect, "SELECT * FROM media");
+				                  $no=0;
+			                    while($data = mysqli_fetch_array($query)){
+			                		?>
+			                    <tr>
+			                        <td><?= $data['ig'] ?></td><br>
+			                        <td><?= $data['fb'] ?></td><br>
+			                        <td><?= $data['gm'] ?></td><br>
+			                        <td><?= $data['yt'] ?></td><br>
+			                    </tr>
+				                 <?php } ?>
 			</div>
 			<div class="FORMAL-EDUCATION">
 							<h4> FORMAL EDUCATION </h4>
-							<ul>
-								<li><a href="https://www.google.com/search?q=sdn+karanganyar+1&oq=sdnkaranganya&aqs=chrome.2.69i57j0i13l7.9040j0j7&sourceid=chrome&ie=UTF-8"> SD Negeri Karang Anyar 1 Bangkalan Madura</a></li>
-								<li><a href="https://mtsn2jombang.sch.id/"> MTsN 2 Rejoso Peterongan Jombang 1</a></li>
-								<li><a href="https://smadu1-jbg.sch.id/"> SMA DU 1 BPP-Teknologi Jombang</a></li>
-								<li><a href="https://www.upnjatim.ac.id/"> UPN Veteran Jawa Timur</a></li>
-							</ul>
+							<?php 
+				                  //proses menampilkan data dari database:
+				                  //siapkan query SQL
+				                  $query = mysqli_query($connect, "SELECT * FROM sekolah");
+				                  $no=0;
+			                    while($data = mysqli_fetch_array($query)){
+			                		?>
+			                    <tr>
+			                        <td><?= $data['SD'] ?></td><br>
+			                        <td><?= $data['SMP'] ?></td><br>
+			                        <td><?= $data['SMA'] ?></td><br>
+			                        <td><?= $data['S1'] ?></td><br>
+			                    </tr>
+				                 <?php } ?>
 						</div>
 		</div>
 
@@ -117,23 +137,13 @@ include ('conn.php');
 						<div class="sosial-media">
 							<h4> CONTACT ME </h4>
 							<ul>
-								<?php 
-                  //proses menampilkan data dari database:
-                  //siapkan query SQL
-                  $query = "SELECT * FROM pemweb";
-                  $result = mysqli_query(connection(),$query);
-                 ?>
+								
 							</ul>
 						</div>
 						<div class="FORMAL-EDUCATION">
 							<h4> FORMAL EDUCATION </h4>
 							<ul>
-								<?php 
-                  //proses menampilkan data dari database:
-                  //siapkan query SQL
-                  $query = "SELECT * FROM pemweb";
-                  $result = mysqli_query(connection(),$query);
-                 ?>
+								
 							</ul>
 						</div>
 				</div>

@@ -1,19 +1,12 @@
-<?php 
+<?php
+$host = "localhost"; // Nama hostnya
+$username = "root"; // Username
+$password = ""; // Password (Isi jika menggunakan password)
+$database = "education"; // Nama databasenya
+$connect = mysqli_connect($host, $username, $password, $database); // Koneksi ke MySQL
 
-function connection() {
-   // membuat konekesi ke database system
-   $dbServer = 'localhost';
-   $dbUser = 'root';
-   $dbPass = '';
-   $dbName = "pemweb";
-
-   $conn = mysqli_connect($dbServer, $dbUser, $dbPass);
-
-   if(! $conn) {
-	die('Koneksi gagal: ' . mysqli_error());
-   }
-   //memilih database yang akan dipakai
-   mysqli_select_db($conn,$dbName);
-	
-   return $conn;
+if( !$connect ){
+    die("Gagal terhubung dengan database: " . mysqli_connect_error());
 }
+
+?>
