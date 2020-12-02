@@ -1,0 +1,107 @@
+body{
+    font-family: times new roman, arial, helvetica, sans-serif;
+    margin: 0;
+    background-color:black;
+    color: white;
+}
+.header .desc{
+    position: absolute;
+}
+.header .desc{
+    letter-spacing: 10px;
+    margin-top: 180px;
+    left: 35%;
+    /*text-align: center;*/
+}
+.nav-bar ul li{
+    display: inline-block;
+    padding: 0 20px;
+}
+.nav-bar ul li .search{
+    margin-left: 650px;
+    padding: 10px;
+    border-radius: 3px;
+}
+.nav-bar ul li a{
+    color: yellow;
+    text-decoration: none;
+}
+ul.menu li:hover a{
+    color: orange;
+    text-decoration: overline;
+
+}
+.image-article{
+    margin-right: 10px;
+    padding : 0,5em;
+    border : 1px solid #eee;
+    float : left;
+}
+.articles{
+    font-style: sans-serif;
+}
+.content .title{
+    font-size: 50px;
+    font-weight: bold;
+    color: yellow;
+    
+}
+.content .identity {
+    font-size: 12px;
+    font-style: italic;
+}
+.identity{
+    color: orange;
+    margin-bottom: 10px;
+}
+.sidebar{
+    /* margin-left: 33px; */
+    color: yellow;
+    width: 450px;
+    height: 500px;
+    padding-left: 20px;
+    padding-top: 20px;
+    float: right;
+    background-color: indianred;
+}
+.sidebar .FORMAL-EDUCATION ul li a{
+    text-decoration: none;
+    color: white;
+}
+.sidebar .FORMAL-EDUCATION ul li a:hover{
+    text-decoration: underline;
+    color: orange;
+}
+.sidebar{
+    margin-left: 33px;
+    color: yellow;
+}
+.sidebar .sosial-media ul li a{
+    text-decoration: none;
+    color: white;
+}
+.sidebar .sosial-media ul li a:hover{
+    text-decoration: underline;
+    color: orange;
+}
+
+.clear{
+    clear: left;
+}
+
+.footer{
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+
+.content{
+    width: 850px;
+    height: 500px;
+    padding: 20px;
+    float: left;
+    background-color: indianred;
+}
